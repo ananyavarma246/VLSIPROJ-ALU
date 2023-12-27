@@ -1,0 +1,60 @@
+.include TSMC_180nm.txt
+
+
+.param SUPPLY = 1.8
+
+.global gnd
+
+Vdd vdd gnd 'SUPPLY'
+
+V_in_a node_a gnd PULSE(0 1.8 0ns 100ps 100ps 20ns 40ns)
+V_in_b node_b gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 60ns)
+* SPICE3 file created from and.ext - technology: scmos
+
+.option scale=0.09u
+
+M1000 node_inter node_a vdd vdd CMOSP w=9 l=4
++  ad=189 pd=78 as=270 ps=114
+M1001 node_out node_inter vdd vdd CMOSP w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1002 node_inter node_b vdd vdd CMOSP w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1003 node_x node_a gnd Gnd CMOSN w=9 l=4
++  ad=189 pd=78 as=180 ps=76
+M1004 node_out node_inter gnd Gnd CMOSN w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1005 node_inter node_b node_x Gnd CMOSN w=9 l=4
++  ad=90 pd=38 as=0 ps=0
+C0 gnd node_b 0.09fF
+C1 node_out gnd 0.06fF
+C2 node_b node_inter 0.13fF
+C3 vdd node_a 0.16fF
+C4 vdd vdd 0.20fF
+C5 gnd node_a 0.09fF
+C6 node_inter vdd 0.03fF
+C7 vdd node_inter 0.26fF
+C8 gnd node_x 0.20fF
+C9 gnd node_inter 0.15fF
+C10 vdd node_b 0.14fF
+C11 vdd node_out 0.06fF
+C12 node_x Gnd 0.04fF
+C13 gnd Gnd 0.41fF
+C14 node_out Gnd 0.15fF
+C15 vdd Gnd 0.35fF
+C16 node_inter Gnd 0.71fF
+C17 node_b Gnd 0.39fF
+C18 node_a Gnd 0.37fF
+C19 vdd Gnd 3.01fF
+
+C20 node_out Gnd 10f
+
+.tran 1n 800n
+
+.control
+run
+set color0 = rgb:f/f/e
+set color1 = black
+plot v(node_a) v(node_b)+2 v(node_out)+4
+hardcopy image.ps v(node_a) v(node_b)+2 v(node_out)+4
+.end
+.endc

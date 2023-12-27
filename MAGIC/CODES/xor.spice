@@ -1,0 +1,66 @@
+* SPICE3 file created from xor.ext - technology: scmos
+
+.option scale=0.09u
+
+M1000 node_bnot node_b vdd w_n565_470# pfet w=7 l=2
++  ad=98 pd=42 as=280 ps=136
+M1001 node_x node_b vdd w_n565_470# pfet w=7 l=3
++  ad=315 pd=146 as=0 ps=0
+M1002 node_anot node_a vdd w_n565_470# pfet w=7 l=3
++  ad=91 pd=40 as=0 ps=0
+M1003 node_bnot node_b gnd Gnd nfet w=7 l=2
++  ad=98 pd=42 as=280 ps=136
+M1004 node_x node_a vdd w_n565_470# pfet w=7 l=3
++  ad=0 pd=0 as=0 ps=0
+M1005 node_out node_b node_y Gnd nfet w=7 l=3
++  ad=147 pd=70 as=154 ps=72
+M1006 node_anot node_a gnd Gnd nfet w=7 l=3
++  ad=91 pd=40 as=0 ps=0
+M1007 node_y node_a gnd Gnd nfet w=7 l=3
++  ad=0 pd=0 as=0 ps=0
+M1008 node_out node_bnot node_x w_n565_470# pfet w=7 l=3
++  ad=147 pd=70 as=0 ps=0
+M1009 node_out node_anot node_x w_n565_470# pfet w=7 l=3
++  ad=0 pd=0 as=0 ps=0
+M1010 node_out node_bnot node_z Gnd nfet w=7 l=3
++  ad=0 pd=0 as=161 ps=74
+M1011 node_z node_anot gnd Gnd nfet w=7 l=3
++  ad=0 pd=0 as=0 ps=0
+C0 node_bnot node_a 0.10fF
+C1 vdd w_n565_470# 0.24fF
+C2 node_b w_n565_470# 0.25fF
+C3 gnd node_z 0.12fF
+C4 node_out gnd 0.12fF
+C5 node_bnot gnd 0.17fF
+C6 node_bnot vdd 0.04fF
+C7 node_b node_bnot 0.10fF
+C8 node_out w_n565_470# 0.15fF
+C9 node_bnot w_n565_470# 0.19fF
+C10 node_anot node_a 0.01fF
+C11 gnd node_y 0.12fF
+C12 vdd node_x 0.06fF
+C13 node_anot gnd 0.17fF
+C14 node_bnot node_out 0.12fF
+C15 node_anot vdd 0.04fF
+C16 node_b node_x 0.08fF
+C17 node_b node_anot 0.06fF
+C18 gnd node_a 0.15fF
+C19 node_x w_n565_470# 0.32fF
+C20 vdd node_a 0.15fF
+C21 node_anot w_n565_470# 0.19fF
+C22 node_b node_a 0.02fF
+C23 node_x node_out 0.10fF
+C24 node_b gnd 0.25fF
+C25 node_anot node_out 0.01fF
+C26 w_n565_470# node_a 0.65fF
+C27 node_anot node_bnot 0.19fF
+C28 node_z Gnd 0.02fF
+C29 node_y Gnd 0.01fF
+C30 gnd Gnd 0.80fF
+C31 node_out Gnd 0.84fF
+C32 vdd Gnd 0.80fF
+C33 node_bnot Gnd 0.24fF
+C34 node_anot Gnd 0.76fF
+C35 node_b Gnd 0.34fF
+C36 node_a Gnd 0.38fF
+C37 w_n565_470# Gnd 7.36fF

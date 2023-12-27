@@ -1,0 +1,139 @@
+
+.include TSMC_180nm.txt
+
+
+.param SUPPLY = 1.8
+
+.global gnd
+
+Vdd vdd gnd 'SUPPLY'
+
+V_in_a node_a gnd DC 1.8
+V_in_b node_b gnd DC 1.8
+V_in_c node_c gnd DC 1.8
+V_in_d node_d gnd DC 1.8
+V_in_e node_e gnd PULSE(0 1.8 0ns 100ps 100ps 20ns 40ns)
+
+* SPICE3 file created from and5_input.ext - technology: scmos
+
+.option scale=0.09u
+
+M1000 node_out node_nand gnd Gnd CMOSN w=11 l=4
++  ad=198 pd=58 as=374 ps=112
+M1001 node_nand node_e vdd Vdd CMOSP w=11 l=4
++  ad=990 pd=290 as=1188 ps=348
+M1002 node_y node_b node_x Gnd CMOSN w=11 l=4
++  ad=407 pd=118 as=418 ps=120
+M1003 node_nand node_d vdd Vdd CMOSP w=11 l=4
++  ad=0 pd=0 as=0 ps=0
+M1004 node_nand node_e node_m Gnd CMOSN w=11 l=4
++  ad=187 pd=56 as=407 ps=118
+M1005 node_nand node_a vdd Vdd CMOSP w=11 l=4
++  ad=0 pd=0 as=0 ps=0
+M1006 node_m node_d node_n Gnd CMOSN w=11 l=4
++  ad=0 pd=0 as=385 ps=114
+M1007 node_nand node_c vdd Vdd CMOSP w=11 l=4
++  ad=0 pd=0 as=0 ps=0
+M1008 node_x node_a gnd Gnd CMOSN w=11 l=4
++  ad=0 pd=0 as=0 ps=0
+M1009 node_out node_nand vdd Vdd CMOSP w=11 l=4
++  ad=198 pd=58 as=0 ps=0
+M1010 node_nand node_b vdd Vdd CMOSP w=11 l=4
++  ad=0 pd=0 as=0 ps=0
+M1011 node_n node_c node_y Gnd CMOSN w=11 l=4
++  ad=0 pd=0 as=0 ps=0
+C0 node_out Vdd 0.08fF
+C1 node_c node_nand 0.10fF
+C2 Vdd node_nand 0.92fF
+C3 Vdd node_c 0.20fF
+C4 gnd node_d 0.05fF
+C5 vdd node_nand 0.21fF
+C6 gnd node_a 0.05fF
+C7 vdd Vdd 0.24fF
+C8 node_e node_nand 0.10fF
+C9 node_b node_nand 0.10fF
+C10 Vdd node_e 0.20fF
+C11 Vdd node_b 0.20fF
+C12 gnd node_nand 0.09fF
+C13 gnd node_c 0.05fF
+C14 node_d node_nand 0.10fF
+C15 Vdd node_d 0.20fF
+C16 Vdd node_a 0.20fF
+C17 gnd node_e 0.05fF
+C18 gnd node_b 0.05fF
+C19 node_m Gnd 0.02fF
+C20 node_n Gnd 0.02fF
+C21 node_y Gnd 0.01fF
+C22 node_x Gnd 0.02fF
+C23 gnd Gnd 1.93fF
+C24 node_out Gnd 0.29fF
+C25 vdd Gnd 1.89fF
+C26 node_nand Gnd 1.08fF
+C27 node_e Gnd 0.78fF
+C28 node_d Gnd 0.41fF
+C29 node_c Gnd 0.40fF
+C30 node_b Gnd 0.51fF
+C31 node_a Gnd 0.47fF
+C32 Vdd Gnd 11.32fF
+
+C33 node_out gnd 50f
+
+.tran 1n 800n
+
+* .measure tran trise1 
+* + TRIG v(node_a) VAL = 'SUPPLY/2' RISE =1
+* + TARG v(node_out) VAL = 'SUPPLY/2' RISE =1 
+
+* .measure tran tfall1 
+* + TRIG v(node_a) VAL = 'SUPPLY/2' FALL =1 
+* + TARG v(node_out) VAL = 'SUPPLY/2' FALL=1
+
+* .measure tran tpd1 param = '(trise1 + tfall1)/2' goal = 0
+
+* .measure tran trise2
+* + TRIG v(node_b) VAL = 'SUPPLY/2' RISE =1
+* + TARG v(node_out) VAL = 'SUPPLY/2' RISE =1 
+
+* .measure tran tfall2 
+* + TRIG v(node_b) VAL = 'SUPPLY/2' FALL =1 
+* + TARG v(node_out) VAL = 'SUPPLY/2' FALL=1
+
+* .measure tran tpd2 param = '(trise2 + tfall2)/2' goal = 0
+
+* .measure tran trise3 
+* + TRIG v(node_c) VAL = 'SUPPLY/2' RISE =1
+* + TARG v(node_out) VAL = 'SUPPLY/2' RISE =1 
+
+* .measure tran tfall3 
+* + TRIG v(node_c) VAL = 'SUPPLY/2' FALL =1 
+* + TARG v(node_out) VAL = 'SUPPLY/2' FALL=1
+
+* .measure tran tpd3 param = '(trise3 + tfall3)/2' goal = 0
+
+* .measure tran trise4 
+* + TRIG v(node_d) VAL = 'SUPPLY/2' RISE =1
+* + TARG v(node_out) VAL = 'SUPPLY/2' RISE =1 
+
+* .measure tran tfall4 
+* + TRIG v(node_d) VAL = 'SUPPLY/2' FALL =1 
+* + TARG v(node_out) VAL = 'SUPPLY/2' FALL=1
+
+* .measure tran tpd4 param = '(trise4 + tfall4)/2' goal = 0
+
+.measure tran trise5 
++ TRIG v(node_e) VAL = 'SUPPLY/2' RISE =1
++ TARG v(node_out) VAL = 'SUPPLY/2' RISE =1 
+
+.measure tran tfall5 
++ TRIG v(node_e) VAL = 'SUPPLY/2' FALL =1 
++ TARG v(node_out) VAL = 'SUPPLY/2' FALL=1
+
+.measure tran tpd5 param = '(trise5 + tfall5)/2' goal = 0
+.control
+run
+set color0 = rgb:f/f/e
+set color1 = black
+plot v(node_a) v(node_b)+2 v(node_c)+4 v(node_d)+6 v(node_e)+8 v(node_out)+10
+hardcopy image.ps v(node_a) v(node_b)+2 v(node_c)+4 v(node_d)+6 v(node_e)+8 v(node_out)+10
+.end
+.endc

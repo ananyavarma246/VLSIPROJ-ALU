@@ -1,0 +1,28 @@
+timestamp 1699688001
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+node "gnd" 54 238.752 91 82 ndc 84 58 0 0 0 0 0 0 0 0 0 0 0 0 312 164 0 0 0 0 0 0 0 0 0 0
+node "node_out" 69 196.283 104 82 ndif 76 54 36 26 0 0 0 0 0 0 0 0 0 0 290 168 0 0 0 0 0 0 0 0 0 0
+node "node_x" 59 5.32907e-15 104 121 pdif 0 0 84 58 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "vdd" 20 219.67 91 121 pdc 0 0 40 28 0 0 0 0 0 0 0 0 0 0 304 160 0 0 0 0 0 0 0 0 0 0
+node "node_b" 127 255.055 128 99 pc 0 0 0 0 0 0 0 0 0 0 151 106 0 0 24 20 0 0 0 0 0 0 0 0 0 0
+node "node_a" 129 260.511 99 98 pc 0 0 0 0 0 0 0 0 0 0 155 108 0 0 24 20 0 0 0 0 0 0 0 0 0 0
+node "w_85_115#" 3658 1012.44 85 115 nw 0 0 0 0 1008 158 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "node_out" "w_85_115#" 27.6216
+cap "node_b" "node_out" 145.436
+cap "node_a" "gnd" 36.18
+cap "node_a" "w_85_115#" 78.435
+cap "node_b" "gnd" 36.18
+cap "vdd" "w_85_115#" 27.6216
+cap "node_x" "w_85_115#" 29.1024
+cap "gnd" "node_out" 206.19
+cap "node_b" "w_85_115#" 78.435
+fet nfet 129 82 130 83 12 14 "Gnd!" "node_b" 6 0 "gnd" 4 0 "node_out" 4 0
+fet nfet 101 82 102 83 12 14 "Gnd!" "node_a" 6 0 "gnd" 4 0 "node_out" 4 0
+fet pfet 129 121 130 122 12 14 "w_85_115#" "node_b" 6 0 "node_x" 4 0 "node_out" 4 0
+fet pfet 101 121 102 122 12 14 "w_85_115#" "node_a" 6 0 "vdd" 4 0 "node_x" 4 0
+subcap "node_out" -19.1613
+subcap "node_a" -3.2676

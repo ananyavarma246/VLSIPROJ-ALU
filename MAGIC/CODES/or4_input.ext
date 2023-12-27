@@ -1,0 +1,49 @@
+timestamp 1699126766
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+node "gnd" 127 926.581 -728 231 ndif 576 218 0 0 0 0 0 0 0 0 0 0 0 0 1728 508 0 0 0 0 0 0 0 0 0 0
+node "node_out" 21 226.205 -578 231 ndif 108 42 108 42 0 0 0 0 0 0 0 0 0 0 380 198 0 0 0 0 0 0 0 0 0 0
+node "node_m" 46 5.32907e-15 -644 313 pdif 0 0 225 86 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "node_y" 46 5.32907e-15 -677 313 pdif 0 0 225 86 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "node_x" 46 5.32907e-15 -712 313 pdif 0 0 234 88 0 0 0 0 0 0 0 0 0 0 52 34 0 0 0 0 0 0 0 0 0 0
+node "vdd" 48 870.425 -728 313 pdif 0 0 225 86 0 0 0 0 0 0 0 0 0 0 1640 464 0 0 0 0 0 0 0 0 0 0
+node "node_nor" 323 1228.46 -712 231 ndif 441 170 108 42 0 0 0 0 0 0 440 228 0 0 1064 540 0 0 0 0 0 0 0 0 0 0
+node "node_d" 210 549.874 -619 271 pc 0 0 0 0 0 0 0 0 0 0 436 226 0 0 32 24 0 0 0 0 0 0 0 0 0 0
+node "node_c" 210 549.874 -652 272 pc 0 0 0 0 0 0 0 0 0 0 436 226 0 0 32 24 0 0 0 0 0 0 0 0 0 0
+node "node_b" 210 549.874 -685 273 pc 0 0 0 0 0 0 0 0 0 0 436 226 0 0 32 24 0 0 0 0 0 0 0 0 0 0
+node "node_a" 210 549.874 -720 274 pc 0 0 0 0 0 0 0 0 0 0 436 226 0 0 32 24 0 0 0 0 0 0 0 0 0 0
+node "w_n735_299#" 4725 6257.41 -735 299 nw 0 0 0 0 6230 426 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "node_m" "w_n735_299#" 21.0864
+cap "node_d" "w_n735_299#" 204
+cap "node_x" "w_n735_299#" 24.354
+cap "node_nor" "node_b" 104.904
+cap "vdd" "w_n735_299#" 86.4384
+cap "node_nor" "node_d" 104.904
+cap "node_c" "gnd" 62.406
+cap "node_nor" "vdd" 41.238
+cap "node_y" "w_n735_299#" 21.0864
+cap "node_c" "w_n735_299#" 204
+cap "node_nor" "gnd" 219.11
+cap "gnd" "node_a" 62.406
+cap "gnd" "node_b" 62.406
+cap "node_d" "gnd" 62.406
+cap "node_nor" "w_n735_299#" 262.772
+cap "w_n735_299#" "node_a" 204
+cap "node_nor" "node_c" 104.904
+cap "node_out" "w_n735_299#" 58.7724
+cap "w_n735_299#" "node_b" 204
+fet nfet -582 231 -581 232 36 26 "Gnd!" "node_nor" 8 0 "gnd" 9 0 "node_out" 9 0
+fet nfet -615 231 -614 232 36 26 "Gnd!" "node_d" 8 0 "gnd" 9 0 "node_nor" 9 0
+fet nfet -648 231 -647 232 36 26 "Gnd!" "node_c" 8 0 "gnd" 9 0 "node_nor" 9 0
+fet nfet -681 231 -680 232 36 26 "Gnd!" "node_b" 8 0 "gnd" 9 0 "node_nor" 9 0
+fet nfet -716 231 -715 232 36 26 "Gnd!" "node_a" 8 0 "gnd" 9 0 "node_nor" 9 0
+fet pfet -582 313 -581 314 36 26 "w_n735_299#" "node_nor" 8 0 "vdd" 9 0 "node_out" 9 0
+fet pfet -615 313 -614 314 36 26 "w_n735_299#" "node_d" 8 0 "node_m" 9 0 "node_nor" 9 0
+fet pfet -648 313 -647 314 36 26 "w_n735_299#" "node_c" 8 0 "node_y" 9 0 "node_m" 9 0
+fet pfet -681 313 -680 314 36 26 "w_n735_299#" "node_b" 8 0 "node_x" 9 0 "node_y" 9 0
+fet pfet -716 313 -715 314 36 26 "w_n735_299#" "node_a" 8 0 "vdd" 9 0 "node_x" 9 0
+subcap "node_nor" -965.567
+subcap "node_a" -6.5352

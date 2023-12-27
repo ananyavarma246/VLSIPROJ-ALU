@@ -1,0 +1,38 @@
+timestamp 1699688820
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+node "gnd" 72 230.341 -108 171 ndc 72 60 0 0 0 0 0 0 0 0 0 0 0 0 276 176 0 0 0 0 0 0 0 0 0 0
+node "node_out" 22 125.65 -63 171 ndif 24 20 24 20 0 0 0 0 0 0 0 0 0 0 200 108 0 0 0 0 0 0 0 0 0 0
+node "node_x" 47 5.32907e-15 -100 212 pdif 0 0 48 40 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "vdd" 48 212.226 -108 212 pdc 0 0 48 40 0 0 0 0 0 0 0 0 0 0 460 202 0 0 0 0 0 0 0 0 0 0
+node "node_inter" 250 437.43 -100 171 ndif 48 40 24 20 0 0 0 0 0 0 114 112 0 0 318 176 0 0 0 0 0 0 0 0 0 0
+node "node_b" 196 248.955 -87 187 pc 0 0 0 0 0 0 0 0 0 0 114 112 0 0 24 20 0 0 0 0 0 0 0 0 0 0
+node "node_a" 196 252.223 -105 185 pc 0 0 0 0 0 0 0 0 0 0 114 112 0 0 28 22 0 0 0 0 0 0 0 0 0 0
+node "w_n117_206#" 4064 1124.93 -117 206 nw 0 0 0 0 1120 172 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "gnd" "node_out" 82.476
+cap "vdd" "node_out" 54.984
+cap "w_n117_206#" "node_x" 29.1024
+cap "node_inter" "node_x" 27.492
+cap "node_b" "gnd" 24.12
+cap "node_a" "w_n117_206#" 64.77
+cap "node_inter" "w_n117_206#" 92.3916
+cap "w_n117_206#" "node_out" 27.6216
+cap "node_inter" "node_out" 54.984
+cap "vdd" "node_x" 109.968
+cap "node_a" "gnd" 24.12
+cap "node_b" "w_n117_206#" 64.77
+cap "node_inter" "node_b" 180.3
+cap "node_inter" "gnd" 296.291
+cap "vdd" "w_n117_206#" 117.367
+cap "node_inter" "vdd" 60.4824
+fet nfet -65 171 -64 172 8 12 "Gnd!" "node_inter" 4 0 "gnd" 4 0 "node_out" 4 0
+fet nfet -84 171 -83 172 8 12 "Gnd!" "node_b" 4 0 "gnd" 4 0 "node_inter" 4 0
+fet nfet -102 171 -101 172 8 12 "Gnd!" "node_a" 4 0 "gnd" 4 0 "node_inter" 4 0
+fet pfet -65 212 -64 213 8 12 "w_n117_206#" "node_inter" 4 0 "vdd" 4 0 "node_out" 4 0
+fet pfet -84 212 -83 213 8 12 "w_n117_206#" "node_b" 4 0 "node_x" 4 0 "node_inter" 4 0
+fet pfet -102 212 -101 213 8 12 "w_n117_206#" "node_a" 4 0 "vdd" 4 0 "node_x" 4 0
+subcap "node_out" -13.0704
+subcap "node_a" -3.2676

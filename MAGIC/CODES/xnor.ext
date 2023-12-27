@@ -1,0 +1,59 @@
+timestamp 1699098528
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+node "node_y" 47 24.354 -2645 849 ndif 150 74 0 0 0 0 0 0 0 0 0 0 0 0 52 34 0 0 0 0 0 0 0 0 0 0
+node "node_x" 46 24.354 -2708 849 ndif 144 72 0 0 0 0 0 0 0 0 0 0 0 0 52 34 0 0 0 0 0 0 0 0 0 0
+node "gnd" 107 1349.61 -2791 849 ndif 276 140 0 0 0 0 0 0 0 0 0 0 0 0 2811 528 0 0 0 0 0 0 0 0 0 0
+node "node_out" 101 1087.08 -2676 849 ndif 132 68 138 70 0 0 0 0 0 0 0 0 0 0 1665 718 0 0 0 0 0 0 0 0 0 0
+node "node_z" 122 328.547 -2708 938 pdif 0 0 282 142 0 0 0 0 0 0 0 0 0 0 756 386 0 0 0 0 0 0 0 0 0 0
+node "vdd" 122 1213.24 -2791 938 pdif 0 0 282 142 0 0 0 0 0 0 0 0 0 0 2560 648 0 0 0 0 0 0 0 0 0 0
+node "node_anot" 330 2261.14 -2778 849 ndif 84 40 84 40 0 0 0 0 0 0 366 242 0 0 497 254 695 288 0 0 0 0 0 0 0 0
+node "node_bnot" 321 983.534 -2743 849 ndif 78 38 78 38 0 0 0 0 0 0 372 242 0 0 678 296 0 0 0 0 0 0 0 0 0 0
+node "node_a" 838 1617.64 -2788 900 pc 0 0 0 0 0 0 0 0 0 0 878 624 0 0 84 40 0 0 0 0 0 0 0 0 0 0
+node "node_b" 922 2007.34 -2752 899 pc 0 0 0 0 0 0 0 0 0 0 1113 736 0 0 66 34 0 0 0 0 0 0 0 0 0 0
+node "w_n2797_924#" 5922 6556.72 -2797 924 nw 0 0 0 0 6528 472 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "node_b" "node_z" 90.738
+cap "node_a" "w_n2797_924#" 342.65
+cap "gnd" "node_out" 32.9904
+cap "w_n2797_924#" "node_z" 223.066
+cap "node_bnot" "vdd" 27.492
+cap "node_z" "node_out" 32.9904
+cap "node_anot" "gnd" 23.5646
+cap "node_a" "node_anot" 7.818
+cap "node_b" "vdd" 181.476
+cap "vdd" "w_n2797_924#" 172.877
+cap "node_a" "gnd" 153.144
+cap "node_bnot" "w_n2797_924#" 227.091
+cap "node_anot" "vdd" 23.5646
+cap "node_b" "w_n2797_924#" 369.98
+cap "node_b" "node_out" 90.738
+cap "node_bnot" "node_anot" 104.532
+cap "w_n2797_924#" "node_out" 86.4384
+cap "vdd" "node_z" 32.9904
+cap "node_bnot" "gnd" 27.492
+cap "node_a" "node_bnot" 118.017
+cap "node_b" "node_anot" 50.9829
+cap "node_bnot" "node_z" 220.343
+cap "node_anot" "w_n2797_924#" 227.091
+cap "node_b" "node_a" 22.662
+cap "node_anot" "node_out" 230.947
+fet nfet -2615 849 -2614 850 18 18 "Gnd!" "node_anot" 6 0 "node_y" 6 0 "node_out" 6 0
+fet nfet -2648 849 -2647 850 18 18 "Gnd!" "node_b" 6 0 "gnd" 6 0 "node_y" 6 0
+fet nfet -2679 849 -2678 850 18 18 "Gnd!" "node_bnot" 6 0 "node_x" 6 0 "node_out" 6 0
+fet nfet -2711 849 -2710 850 18 18 "Gnd!" "node_a" 6 0 "gnd" 6 0 "node_x" 6 0
+fet nfet -2746 849 -2745 850 18 18 "Gnd!" "node_b" 6 0 "gnd" 6 0 "node_bnot" 6 0
+fet nfet -2781 849 -2780 850 18 18 "Gnd!" "node_a" 6 0 "gnd" 6 0 "node_anot" 6 0
+fet pfet -2615 938 -2614 939 18 18 "w_n2797_924#" "node_anot" 6 0 "node_z" 6 0 "node_out" 6 0
+fet pfet -2648 938 -2647 939 18 18 "w_n2797_924#" "node_b" 6 0 "node_z" 6 0 "node_out" 6 0
+fet pfet -2679 938 -2678 939 18 18 "w_n2797_924#" "node_bnot" 6 0 "vdd" 6 0 "node_z" 6 0
+fet pfet -2711 938 -2710 939 18 18 "w_n2797_924#" "node_a" 6 0 "vdd" 6 0 "node_z" 6 0
+fet pfet -2746 938 -2745 939 18 18 "w_n2797_924#" "node_b" 6 0 "vdd" 6 0 "node_bnot" 6 0
+fet pfet -2781 938 -2780 939 18 18 "w_n2797_924#" "node_a" 6 0 "vdd" 6 0 "node_anot" 6 0
+subcap "gnd" -1013.89
+subcap "node_anot" -1745.01
+subcap "node_bnot" -818.673
+subcap "node_a" -833.775
+subcap "node_b" -1533.69

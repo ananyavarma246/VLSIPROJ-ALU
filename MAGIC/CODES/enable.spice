@@ -1,0 +1,269 @@
+.include TSMC_180nm.txt
+
+
+.param SUPPLY = 1.8
+
+.global gnd
+
+Vdd vdd gnd 'SUPPLY'
+
+V_in_a0 node_a0 gnd PULSE(0 1.8 0ns 100ps 100ps 20ns 40ns)
+V_in_a1 node_a1 gnd PULSE(0 1.8 0ns 100ps 100ps 30ns 50ns)
+V_in_a2 node_a2 gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 60ns)
+V_in_a3 node_a3 gnd PULSE(0 1.8 0ns 100ps 100ps 50ns 70ns)
+
+V_in_b0 node_b0 gnd PULSE(0 1.8 0ns 100ps 100ps 60ns 80ns)
+V_in_b1 node_b1 gnd PULSE(0 1.8 0ns 100ps 100ps 70ns 90ns)
+V_in_b2 node_b2 gnd PULSE(0 1.8 0ns 100ps 100ps 80ns 100ns)
+V_in_b3 node_b3 gnd PULSE(0 1.8 0ns 100ps 100ps 90ns 110ns)
+
+v_in_enable enable gnd PULSE(0 1.8 0ns 100ps 100ps 20ns 40ns)
+
+* SPICE3 file created from enable.ext - technology: scmos
+
+.option scale=0.09u
+
+M1000 node_c3 a_119_142# vdd vdd CMOSP w=9 l=4
++  ad=81 pd=36 as=2160 ps=912
+M1001 a_119_84# node_a3 gnd Gnd CMOSN w=9 l=4
++  ad=189 pd=78 as=1440 ps=608
+M1002 node_d0 a_n290_22# vdd vdd CMOSP w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1003 a_119_142# node_a3 vdd vdd CMOSP w=9 l=4
++  ad=189 pd=78 as=0 ps=0
+M1004 a_127_n33# node_b3 gnd Gnd CMOSN w=9 l=4
++  ad=189 pd=78 as=0 ps=0
+M1005 node_c2 a_n18_144# gnd Gnd CMOSN w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1006 a_n289_142# node_a0 vdd vdd CMOSP w=9 l=4
++  ad=189 pd=78 as=0 ps=0
+M1007 a_n290_22# enable a_n290_n36# Gnd CMOSN w=9 l=4
++  ad=90 pd=38 as=189 ps=78
+M1008 a_n144_23# enable a_n144_n35# Gnd CMOSN w=9 l=4
++  ad=90 pd=38 as=189 ps=78
+M1009 node_d1 a_n144_23# gnd Gnd CMOSN w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1010 a_n18_144# node_a2 vdd vdd CMOSP w=9 l=4
++  ad=189 pd=78 as=0 ps=0
+M1011 a_n18_144# enable a_n18_86# Gnd CMOSN w=9 l=4
++  ad=90 pd=38 as=189 ps=78
+M1012 node_d3 a_127_25# vdd vdd CMOSP w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1013 node_c0 a_n289_142# vdd vdd CMOSP w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1014 a_n289_84# node_a0 gnd Gnd CMOSN w=9 l=4
++  ad=189 pd=78 as=0 ps=0
+M1015 a_127_25# enable vdd vdd CMOSP w=9 l=4
++  ad=189 pd=78 as=0 ps=0
+M1016 a_n153_143# node_a1 vdd vdd CMOSP w=9 l=4
++  ad=189 pd=78 as=0 ps=0
+M1017 a_n153_143# enable a_n153_85# Gnd CMOSN w=9 l=4
++  ad=90 pd=38 as=189 ps=78
+M1018 a_n14_26# enable a_n14_n32# Gnd CMOSN w=9 l=4
++  ad=90 pd=38 as=189 ps=78
+M1019 node_d2 a_n14_26# vdd vdd CMOSP w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1020 a_n14_26# enable vdd vdd CMOSP w=9 l=4
++  ad=189 pd=78 as=0 ps=0
+M1021 node_d2 a_n14_26# gnd Gnd CMOSN w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1022 a_n14_26# node_b2 vdd vdd CMOSP w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1023 node_c3 a_119_142# gnd Gnd CMOSN w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1024 a_n290_22# node_bo vdd vdd CMOSP w=9 l=4
++  ad=189 pd=78 as=0 ps=0
+M1025 a_n144_23# node_b1 vdd vdd CMOSP w=9 l=4
++  ad=189 pd=78 as=0 ps=0
+M1026 a_n289_142# enable vdd vdd CMOSP w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1027 node_d1 a_n144_23# vdd vdd CMOSP w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1028 a_n289_142# enable a_n289_84# Gnd CMOSN w=9 l=4
++  ad=90 pd=38 as=0 ps=0
+M1029 a_119_142# enable a_119_84# Gnd CMOSN w=9 l=4
++  ad=90 pd=38 as=0 ps=0
+M1030 a_127_25# node_b3 vdd vdd CMOSP w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1031 a_n153_143# enable vdd vdd CMOSP w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1032 node_c1 a_n153_143# vdd vdd CMOSP w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1033 a_n18_86# node_a2 gnd Gnd CMOSN w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1034 a_n14_n32# node_b2 gnd Gnd CMOSN w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1035 a_n18_144# enable vdd vdd CMOSP w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1036 a_119_142# enable vdd vdd CMOSP w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1037 a_127_25# enable a_127_n33# Gnd CMOSN w=9 l=4
++  ad=90 pd=38 as=0 ps=0
+M1038 node_c0 a_n289_142# gnd Gnd CMOSN w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1039 node_c2 a_n18_144# vdd vdd CMOSP w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1040 a_n290_n36# node_bo gnd Gnd CMOSN w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1041 a_n144_n35# node_b1 gnd Gnd CMOSN w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1042 node_d3 a_127_25# gnd Gnd CMOSN w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1043 node_d0 a_n290_22# gnd Gnd CMOSN w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+M1044 a_n153_85# node_a1 gnd Gnd CMOSN w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1045 a_n290_22# enable vdd vdd CMOSP w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1046 a_n144_23# enable vdd vdd CMOSP w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1047 node_c1 a_n153_143# gnd Gnd CMOSN w=9 l=4
++  ad=81 pd=36 as=0 ps=0
+C0 a_n18_144# gnd 0.15fF
+C1 a_n289_142# vdd 0.03fF
+C2 vdd enable 0.14fF
+C3 a_n153_143# gnd 0.15fF
+C4 gnd a_n144_n35# 0.20fF
+C5 enable a_127_n33# 0.11fF
+C6 vdd vdd 0.22fF
+C7 vdd node_a3 0.16fF
+C8 vdd enable 0.38fF
+C9 vdd a_n289_142# 0.26fF
+C10 gnd a_127_25# 0.15fF
+C11 enable a_n290_n36# 0.11fF
+C12 vdd vdd 0.22fF
+C13 vdd node_c1 0.06fF
+C14 gnd node_d1 0.06fF
+C15 vdd node_d3 0.06fF
+C16 vdd vdd 0.20fF
+C17 vdd a_n153_143# 0.26fF
+C18 gnd node_b2 0.09fF
+C19 vdd node_a2 0.16fF
+C20 gnd a_n290_22# 0.15fF
+C21 vdd node_d1 0.06fF
+C22 enable a_n144_23# 0.13fF
+C23 vdd a_n14_26# 0.03fF
+C24 gnd a_n18_86# 0.20fF
+C25 node_a1 gnd 0.09fF
+C26 node_a3 gnd 0.09fF
+C27 node_a0 gnd 0.09fF
+C28 enable a_n289_142# 0.25fF
+C29 node_c0 gnd 0.06fF
+C30 vdd enable 0.14fF
+C31 gnd a_127_n33# 0.20fF
+C32 vdd a_119_142# 0.03fF
+C33 node_a2 gnd 0.09fF
+C34 enable vdd 1.18fF
+C35 vdd node_c3 0.06fF
+C36 vdd enable 0.14fF
+C37 vdd node_a1 0.16fF
+C38 gnd a_n290_n36# 0.20fF
+C39 enable a_n14_n32# 0.11fF
+C40 vdd vdd 0.22fF
+C41 vdd enable 0.38fF
+C42 gnd node_b3 0.09fF
+C43 a_n18_144# vdd 0.03fF
+C44 vdd vdd 0.22fF
+C45 vdd node_c2 0.06fF
+C46 a_n153_143# vdd 0.03fF
+C47 gnd node_d0 0.06fF
+C48 vdd a_127_25# 0.26fF
+C49 vdd vdd 0.22fF
+C50 vdd a_127_25# 0.03fF
+C51 gnd a_n144_23# 0.15fF
+C52 vdd node_d2 0.06fF
+C53 enable a_n14_26# 0.13fF
+C54 gnd node_bo 0.09fF
+C55 vdd a_n14_26# 0.26fF
+C56 gnd a_n153_85# 0.20fF
+C57 vdd a_n144_23# 0.26fF
+C58 vdd a_n290_22# 0.03fF
+C59 node_c3 gnd 0.06fF
+C60 a_n289_142# gnd 0.15fF
+C61 vdd a_n290_22# 0.26fF
+C62 node_c2 gnd 0.06fF
+C63 enable a_119_142# 0.25fF
+C64 vdd enable 0.14fF
+C65 gnd a_n14_n32# 0.20fF
+C66 enable a_n18_144# 0.25fF
+C67 vdd a_119_142# 0.26fF
+C68 vdd enable 0.38fF
+C69 enable a_n153_143# 0.25fF
+C70 gnd node_d3 0.06fF
+C71 enable a_n144_n35# 0.11fF
+C72 vdd vdd 0.22fF
+C73 vdd node_a0 0.16fF
+C74 vdd enable 0.38fF
+C75 gnd node_d2 0.06fF
+C76 enable a_127_25# 0.13fF
+C77 vdd node_c0 0.06fF
+C78 vdd vdd 0.20fF
+C79 gnd a_n14_26# 0.15fF
+C80 vdd node_b3 0.16fF
+C81 vdd a_n18_144# 0.26fF
+C82 gnd node_b1 0.09fF
+C83 gnd a_119_84# 0.20fF
+C84 vdd node_d0 0.06fF
+C85 enable a_n290_22# 0.13fF
+C86 vdd node_b2 0.16fF
+C87 vdd a_n144_23# 0.03fF
+C88 gnd a_n289_84# 0.20fF
+C89 vdd node_b1 0.16fF
+C90 a_119_142# gnd 0.15fF
+C91 enable gnd 1.25fF
+C92 vdd node_bo 0.16fF
+C93 node_c1 gnd 0.06fF
+C94 a_127_n33# Gnd 0.04fF
+C95 a_n14_n32# Gnd 0.04fF
+C96 a_n144_n35# Gnd 0.04fF
+C97 a_n290_n36# Gnd 0.04fF
+C98 node_d3 Gnd 0.15fF
+C99 a_127_25# Gnd 0.71fF
+C100 node_b3 Gnd 0.39fF
+C101 node_d2 Gnd 0.15fF
+C102 node_d1 Gnd 0.15fF
+C103 node_d0 Gnd 0.15fF
+C104 a_n14_26# Gnd 0.71fF
+C105 node_b2 Gnd 0.39fF
+C106 a_n144_23# Gnd 0.71fF
+C107 node_b1 Gnd 0.39fF
+C108 a_n290_22# Gnd 0.71fF
+C109 node_bo Gnd 0.39fF
+C110 a_119_84# Gnd 0.04fF
+C111 a_n18_86# Gnd 0.04fF
+C112 a_n153_85# Gnd 0.04fF
+C113 a_n289_84# Gnd 0.04fF
+C114 gnd Gnd 4.72fF
+C115 node_c3 Gnd 0.15fF
+C116 a_119_142# Gnd 0.71fF
+C117 node_a3 Gnd 0.39fF
+C118 node_c2 Gnd 0.15fF
+C119 node_c1 Gnd 0.15fF
+C120 node_c0 Gnd 0.15fF
+C121 vdd Gnd 4.00fF
+C122 a_n18_144# Gnd 0.71fF
+C123 node_a2 Gnd 0.39fF
+C124 a_n153_143# Gnd 0.71fF
+C125 node_a1 Gnd 0.39fF
+C126 a_n289_142# Gnd 0.71fF
+C127 enable Gnd 24.82fF
+C128 node_a0 Gnd 0.39fF
+C129 vdd Gnd 3.08fF
+C130 vdd Gnd 3.08fF
+C131 vdd Gnd 3.08fF
+C132 vdd Gnd 3.08fF
+C133 vdd Gnd 3.08fF
+C134 vdd Gnd 3.01fF
+C135 vdd Gnd 3.03fF
+C136 vdd Gnd 3.08fF
+
+.tran 1n 800n
+
+.control
+run
+set color0 = rgb:f/f/e
+set color1 = black
+plot v(enable)-2 v(node_a0) v(node_a1)+2 v(node_a2)+4 v(node_a3)+6 v(node_b0)+8 v(node_b1)+10 v(node_b2)+12 v(node_b3)+14 v(node_c0)+16 v(node_c1)+18 v(node_c2)+20 v(node_c3)+22 v(node_d0)+24 v(node_d1)+26 v(node_d2)+28 v(node_d3)+30
+hardcopy image.ps v(enable)-2 v(node_a0) v(node_a1)+2 v(node_a2)+4 v(node_a3)+6 v(node_b0)+8 v(node_b1)+10 v(node_b2)+12 v(node_b3)+14 v(node_c0)+16 v(node_c1)+18 v(node_c2)+20 v(node_c3)+22 v(node_d0)+24 v(node_d1)+26 v(node_d2)+28 v(node_d3)+30
+.end
+.endc

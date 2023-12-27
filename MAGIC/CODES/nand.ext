@@ -1,0 +1,28 @@
+timestamp 1699687299
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+node "node_x" 46 32.37 432 390 ndif 64 48 0 0 0 0 0 0 0 0 0 0 0 0 52 34 0 0 0 0 0 0 0 0 0 0
+node "gnd" 15 250.559 421 390 ndc 32 24 0 0 0 0 0 0 0 0 0 0 0 0 308 162 0 0 0 0 0 0 0 0 0 0
+node "node_out" 67 181.732 432 422 pdif 32 24 64 48 0 0 0 0 0 0 0 0 0 0 306 176 0 0 0 0 0 0 0 0 0 0
+node "vdd" 53 176.366 421 422 pdc 0 0 64 48 0 0 0 0 0 0 0 0 0 0 356 186 0 0 0 0 0 0 0 0 0 0
+node "node_b" 111 214.066 451 398 pc 0 0 0 0 0 0 0 0 0 0 134 94 0 0 24 20 0 0 0 0 0 0 0 0 0 0
+node "node_a" 111 217.334 427 404 pc 0 0 0 0 0 0 0 0 0 0 134 94 0 0 28 22 0 0 0 0 0 0 0 0 0 0
+node "w_415_416#" 3310 916.013 415 416 nw 0 0 0 0 912 146 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "node_out" "vdd" 87.9744
+cap "node_out" "gnd" 41.238
+cap "gnd" "node_x" 134.024
+cap "w_415_416#" "node_b" 78.435
+cap "node_out" "node_b" 192.565
+cap "node_out" "w_415_416#" 55.2432
+cap "w_415_416#" "node_a" 78.435
+cap "node_out" "node_a" 24.7428
+cap "w_415_416#" "vdd" 104.341
+fet nfet 453 390 454 391 12 14 "Gnd!" "node_b" 6 0 "node_x" 4 0 "node_out" 4 0
+fet nfet 429 390 430 391 12 14 "Gnd!" "node_a" 6 0 "gnd" 4 0 "node_x" 4 0
+fet pfet 453 422 454 423 12 14 "w_415_416#" "node_b" 6 0 "vdd" 4 0 "node_out" 4 0
+fet pfet 429 422 430 423 12 14 "w_415_416#" "node_a" 6 0 "vdd" 4 0 "node_out" 4 0
+subcap "node_out" -8.8551
+subcap "node_a" -3.2676
