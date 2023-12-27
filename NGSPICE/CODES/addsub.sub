@@ -1,0 +1,17 @@
+.subckt addsub node_a0 node_a1 node_a2 node_a3 node_b0 node_b1 node_b2 node_b3 node_m node_s0 node_s1 node_s2 node_s3 node_c vdd gnd 
+
+.include fulladder.sub
+.include xor.sub
+
+X1 node_b0 node_m node_y1 vdd gnd xor 
+X2 node_b1 node_m node_y2 vdd gnd xor 
+X3 node_b2 node_m node_y3 vdd gnd xor 
+X4 node_b3 node_m node_y4 vdd gnd xor 
+
+X5 node_a0 node_y1 node_m node_s0 node_c1 vdd gnd fulladder
+X6 node_a1 node_y2 node_c1 node_s1 node_c2 vdd gnd fulladder
+X7 node_a2 node_y3 node_c2 node_s2 node_c3 vdd gnd fulladder 
+X8 node_a3 node_y4 node_c3 node_s3 node_c vdd gnd fulladder
+
+.ends addsub 
+

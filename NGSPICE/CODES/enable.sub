@@ -1,0 +1,16 @@
+.subckt enable node_a0 node_a1 node_a2 node_a3 node_b0 node_b1 node_b2 node_b3 node_en node_c0 node_c1 node_c2 node_c3 node_d0 node_d1 node_d2 node_d3 vdd gnd 
+
+.include and.sub
+
+X1 node_en node_a0 node_c0 vdd gnd and 
+X2 node_en node_a1 node_c1 vdd gnd and 
+X3 node_en node_a2 node_c2 vdd gnd and 
+X4 node_en node_a3 node_c3 vdd gnd and 
+
+X5 node_en node_b0 node_d0 vdd gnd and 
+X6 node_en node_b1 node_d1 vdd gnd and 
+X7 node_en node_b2 node_d2 vdd gnd and 
+X8 node_en node_b3 node_d3 vdd gnd and 
+
+.ends
+

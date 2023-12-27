@@ -1,0 +1,55 @@
+.subckt comp node_a0 node_a1 node_a2 node_a3 node_b0 node_b1 node_b2 node_b3 node_c1 node_c2 node_c3 vdd gnd 
+
+.include and.sub 
+.include xnor.sub
+.include not.sub
+.include or.sub
+
+// for c2:(equal)
+X1 node_a0 node_b0 node_y0 vdd gnd xnor
+X2 node_a1 node_b1 node_y1 vdd gnd xnor 
+X3 node_a2 node_b2 node_y2 vdd gnd xnor 
+X4 node_a3 node_b3 node_y3 vdd gnd xnor 
+X5 node_y3 node_y2 node_m vdd gnd and 
+X6 node_y1 node_y0 node_n vdd gnd and 
+X7 node_m node_n node_c2 vdd gnd and 
+
+//for C1:(greater)
+X8 node_b0 node_y5 vdd gnd not 
+X9 node_b1 node_y6 vdd gnd not 
+X10 node_b2 node_y7 vdd gnd not 
+X11 node_b3 node_y8 vdd gnd not 
+
+X12 node_a3 node_y8 node_y9 vdd gnd and 
+X13 node_a2 node_y3 node_i vdd gnd and 
+X14 node_i node_y7 node_y10 vdd gnd and 
+X15 node_a1 node_y6 node_j vdd gnd and 
+X16 node_m node_j node_y11 vdd gnd and 
+X17 node_a0 node_y5 node_k vdd gnd and 
+X18 node_k node_y1 node_l vdd gnd and 
+X19 node_l node_m node_y12 vdd gnd and 
+X20 node_y9 node_y10 node_o vdd gnd or 
+X21 node_y11 node_y12 node_p vdd gnd or 
+X22 node_o node_p node_c1 vdd gnd or 
+
+// for c3 :(lesser)
+
+X23 node_a0 node_y13 vdd gnd not 
+X24 node_a1 node_y14 vdd gnd not 
+X25 node_a2 node_y15 vdd gnd not 
+X26 node_a3 node_y16 vdd gnd not 
+
+X27 node_y16 node_b3 node_y17 vdd gnd and 
+X28 node_y15 node_b2 node_q vdd gnd and 
+X29 node_q node_y3 node_y18 vdd gnd and 
+X30 node_b1 node_y14 node_r vdd gnd and 
+X31 node_r node_m node_y19 vdd gnd and 
+X32 node_b0 node_y13 node_s vdd gnd and 
+X33 node_s node_y1 node_t vdd gnd and 
+X34 node_t node_m node_y20 vdd gnd and 
+X35 node_y17 node_y18 node_u vdd gnd or
+X36 node_y19 node_y20 node_v vdd gnd or 
+X37 node_u node_v node_c3 vdd gnd or 
+
+.ends comp 
+

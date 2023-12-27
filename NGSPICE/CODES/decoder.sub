@@ -1,0 +1,13 @@
+.subckt decoder node_s0 node_s1 node_d0 node_d1 node_d2 node_d3 vdd gnd 
+
+.include not.sub
+.include and.sub
+
+X1 node_s0 node_y1 vdd gnd not 
+X2 node_s1 node_y2 vdd gnd not 
+X3 node_y1 node_y2 node_d0 vdd gnd and 
+X4 node_s0 node_y2 node_d1 vdd gnd and 
+X5 node_y1 node_s1 node_d2 vdd gnd and 
+X6 node_s0 node_s1 node_d3 vdd gnd and 
+
+.ends decoder 

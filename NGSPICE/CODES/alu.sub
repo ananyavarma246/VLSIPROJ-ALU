@@ -1,0 +1,33 @@
+.subckt alu node_s0 node_s1 node_a0 node_a1 node_a2 node_a3 node_b0 node_b1 node_b2 node_b3 node_sa0 node_sa1 node_sa2 node_sa3 node_sac node_ss0 node_ss1 node_ss2 node_ss3 node_ssc node_cg1 node_ce2 node_cl3 node_r0 node_r1 node_r2 node_r3 vdd gnd 
+
+.include addsub.sub
+.include comparator.sub
+.include decoder.sub
+.include enable.sub
+.include and.sub
+.include or.sub
+
+
+X1 node_s0 node_s1 node_dd0 node_dd1 node_dd2 node_dd3 vdd gnd decoder
+
+X3 node_a0 node_a1 node_a2 node_a3 node_b0 node_b1 node_b2 node_b3 node_dd0 node_c0 node_c1 node_c2 node_c3 node_d0 node_d1 node_d2 node_d3 vdd gnd enable
+
+X4 node_c0 node_c1 node_c2 node_c3 node_d0 node_d1 node_d2 node_d3 gnd node_sa0 node_sa1 node_sa2 node_sa3 node_sac vdd gnd addsub
+
+X5 node_a0 node_a1 node_a2 node_a3 node_b0 node_b1 node_b2 node_b3 node_dd1 node_e0 node_e1 node_e2 node_e3 node_f0 node_f1 node_f2 node_f3 vdd gnd enable 
+
+X6 node_e0 node_e1 node_e2 node_e3 node_f0 node_f1 node_f2 node_f3 vdd node_ss0 node_ss1 node_ss2 node_ss3 node_ssc vdd gnd addsub
+
+X7 node_a0 node_a1 node_a2 node_a3 node_b0 node_b1 node_b2 node_b3 node_dd2 node_g0 node_g1 node_g2 node_g3 node_h0 node_h1 node_h2 node_h3 vdd gnd enable
+
+X8 node_g0 node_g1 node_g2 node_g3 node_h0 node_h1 node_h2 node_h3 node_cg1 node_ce2 node_cl3 vdd gnd comp 
+
+X9 node_a0 node_a1 node_a2 node_a3 node_b0 node_b1 node_b2 node_b3 node_dd3 node_i0 node_i1 node_i2 node_i3 node_j0 node_j1 node_j2 node_j3 vdd gnd enable 
+
+X10 node_i0 node_j0 node_r0 vdd gnd and 
+X11 node_i1 node_j1 node_r1 vdd gnd and 
+X12 node_i2 node_j2 node_r2 vdd gnd and 
+X13 node_i3 node_j3 node_r3 vdd gnd and 
+
+
+.ends alu
